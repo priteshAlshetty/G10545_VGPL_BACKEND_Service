@@ -1,0 +1,36 @@
+{
+  "name": "g10545_vgpl_backend_service",
+  "version": "1.0.0",
+  "description": "VGPL EMS Backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/priteshAlshetty/G10545_VGPL_BACKEND_Service.git"
+  },
+  "keywords": [
+    "EMS",
+    "Node",
+    "Express"
+  ],
+  "author": "Pritesh Alshetty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/priteshAlshetty/G10545_VGPL_BACKEND_Service/issues"
+  },
+  "homepage": "https://github.com/priteshAlshetty/G10545_VGPL_BACKEND_Service#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "exceljs": "^4.4.0",
+    "express": "^5.2.1",
+    "pg": "^8.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
