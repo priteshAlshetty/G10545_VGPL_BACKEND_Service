@@ -5,6 +5,7 @@ const cors = require('cors');
 const loginRoute = require('./routes/auth/login.route.js');
 const signupRoute = require('./routes/auth/signup.route.js');
 const rawDataRoute = require('./routes/info/rawdata.routes.js');
+const navigationRoute = require('./routes/navigation/navigation.routes.js');
 //middleware
 const authenticateToken = require('./middleware/auth.middleware.js');
 
@@ -16,6 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 //
 app.use('/api/ems/processeddata', rawDataRoute);
+app.use('/api/ems/navigation/all', navigationRoute);
 //use routes outside of middleware
 //unprotected routes
 app.use('/', loginRoute);
