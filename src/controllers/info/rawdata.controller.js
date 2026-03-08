@@ -41,24 +41,24 @@ async function getRawDataAvg(params) {
 
         let avgRawDataQuery = `
     SELECT
-        AVG(active_energy)  AS active_energy,
-        AVG(reactive_power) AS reactive_power,
-        AVG(apparent_power) AS apparent_power,
-        AVG(current_i1)     AS current_i1,
-        AVG(current_i2)     AS current_i2,
-        AVG(current_i3)     AS current_i3,
-        AVG(voltage_v1)     AS voltage_v1,
-        AVG(voltage_v2)     AS voltage_v2,
-        AVG(voltage_v3)     AS voltage_v3,
-        AVG(active_power)   AS active_power,
-        AVG(frequency)      AS frequency,
-        AVG(power_factor)   AS power_factor,
-        AVG(kw_demand)      AS kw_demand,
-        AVG(thd_i)          AS thd_i,
-        AVG(thd_v)          AS thd_v,
-        AVG(spare1)         AS spare1,
-        AVG(spare2)         AS spare2,
-        AVG(spare3)         AS spare3
+        ROUND(AVG(active_energy),2)  AS active_energy,
+        ROUND(AVG(reactive_power),2) AS reactive_power,
+        ROUND(AVG(apparent_power),2) AS apparent_power,
+        ROUND(AVG(current_i1),2)     AS current_i1,
+        ROUND(AVG(current_i2),2)     AS current_i2,
+        ROUND(AVG(current_i3),2)     AS current_i3,
+        ROUND(AVG(voltage_v1),2)     AS voltage_v1,
+        ROUND(AVG(voltage_v2),2)     AS voltage_v2,
+        ROUND(AVG(voltage_v3),2)     AS voltage_v3,
+        ROUND(AVG(active_power),2)   AS active_power,
+        ROUND(AVG(frequency),2)      AS frequency,
+        ROUND(AVG(power_factor),2)   AS power_factor,
+        ROUND(AVG(kw_demand),2)      AS kw_demand,
+        ROUND(AVG(thd_i),2)          AS thd_i,
+        ROUND(AVG(thd_v),2)          AS thd_v,
+        ROUND(AVG(spare1),2)         AS spare1,
+        ROUND(AVG(spare2),2)         AS spare2,
+        ROUND(AVG(spare3),2)         AS spare3
     FROM ${meter_db}
     WHERE date_time >= CURRENT_DATE
     AND date_time < CURRENT_DATE + INTERVAL '1 day';
